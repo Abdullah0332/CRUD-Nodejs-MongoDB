@@ -1,0 +1,48 @@
+<%- include('./include/head.ejs') %>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+
+    <%- include('./include/nevigation.ejs') %>
+    <div id="Entries"> 
+        <a id="Create" type="submit" name="add" href="/add"> ADD </a>
+        <table>
+            <thead class="thead">
+                <th> Customer Name </th>
+                <th> Phone Number </th>
+                <th> E-mail </th>
+                <th> City </th>
+                <th> Career </th>
+                <th colspan="2"> ACTION </th>
+            </thead>
+            
+            <% if (users.length > 0) { %>
+
+                <% for (let user of users) { %>
+
+                <tbody>
+                    <tr>
+                        <td><%= user.Name %></td>
+                        <td><%= user.Phone_Number %></td>
+                        <td><%= user.Email %></td>
+                        <td class="city"><%= user.City %></td>
+                        <td><%= user.Career %></td>
+                        <td>
+                            <a type="button" href="/edit/<%= user._id %>">UPDATE</a>
+                        </td>
+                        <td>
+                            <form method="POST" action="/delete/<%= user._id %>?method=DELETE">
+                                <button>DELETE</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <% } %>
+        <% } %>
+    
+        </table>
+    </div>    
+    
+<%- include('./include/end.ejs') %>

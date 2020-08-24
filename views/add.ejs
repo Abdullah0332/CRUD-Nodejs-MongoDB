@@ -1,0 +1,26 @@
+<%- include('./include/head.ejs') %>
+<link rel="stylesheet" href="/css/add.css">
+<%- include('./include/nevigation.ejs') %>
+</head>
+
+<body>
+    
+        <form class="form" action="/add" method="POST">
+            <header>
+                <input name="Name" type="text" placeholder="Name">
+            </header>
+            <header>
+                <input name="Email" type="email" placeholder="Email">
+            </header>
+            <header>
+                <input name="Phone" type="number" placeholder="Phone Number">
+            </header>
+            <header>
+                <input name="City" type="text" placeholder="City">
+            </header>
+            <header>
+                <input name="Career" type="text" placeholder="Career">
+            </header>
+            <button type="submit">Add</button>
+        </form>
+    <%- include('./include/end.ejs') %>

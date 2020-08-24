@@ -1,0 +1,8 @@
+{
+    "env":{
+        "MONGO_USER":"ab",
+        "MONGO_PASSWORD":"starc.abaa1",
+        "MONGO_DATABASE":"CRUD"
+    }
+}
+

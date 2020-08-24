@@ -1,0 +1,33 @@
+*{
+    background-color:lightgrey ;
+}
+
+.form{
+    text-align: center;
+    margin-top: 20vh;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 5vh;
+    width: 20%;
+    margin: 5px;
+    background-color: white;
+}
+
+button{
+    height: 7vh;
+    margin-top: 20px;
+    width: 10%;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+}
+button:hover{
+    color: black;
+    background-color: lightgrey;
+    cursor:pointer;
+    box-shadow: 5px 5px 3px black;
+    border: 2px solid black;
+}

@@ -1,0 +1,26 @@
+<%- include('./include/head.ejs') %>
+<link rel="stylesheet" href="/css/add.css">
+</head>
+
+<body>
+    <%- include('./include/nevigation.ejs') %>
+        <form class="form" action="/edit" method="POST">
+            <input type="hidden" value="<%= user._id %>" name="userId">
+            <header>
+                <input name="Name" type="text" placeholder="Name" value="<%= user.Name %>">
+            </header>
+            <header>
+                <input name="Phone" type="number" placeholder="Phone Number" value="<%=user.Phone_Number%>">
+            </header>
+            <header>
+                <input name="Email" type="email" placeholder="Email" value="<%= user.Email %>">
+            </header>
+            <header>
+                <input name="City" type="text" placeholder="City" value="<%=user.City%>">
+            </header>
+            <header>
+                <input name="Career" type="text" placeholder="Career" value="<%= user.Career %>">
+            </header>
+            <button type="submit">Update</button>
+        </form>
+    <%- include('./include/end.ejs') %>
